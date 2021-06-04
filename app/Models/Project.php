@@ -14,6 +14,10 @@ class Project extends Model
         return "/projects/{$this->id}";
     }
 
+    public function owner() {
+        return $this->belongsTo(User::class);
+    }
+
     protected static function newFactory() {
         return \Database\Factories\ProjectFactory::new();
     }
