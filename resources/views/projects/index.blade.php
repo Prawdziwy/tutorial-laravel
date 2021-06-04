@@ -1,15 +1,6 @@
-<!DOCTYPE html>
+@extends ('layouts.app')
 
-<html>
-
-<head>
-
-    <title></title>
-
-</head>
-
-<body>
-
+@section('content')
     <h1>Tutorial</h1>
 
     <ul>
@@ -24,7 +15,4 @@
         @endforelse
 
     </ul>
-
-</body>
-
-</html>
+@endsection
