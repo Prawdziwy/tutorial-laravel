@@ -6,6 +6,7 @@ use App\Models\Project;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use Illuminate\Foundation\Testing\WithFaker;
+use App\Models\User;
 
 class ProjectFactory extends Factory
 {
@@ -26,7 +27,10 @@ class ProjectFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(),
-            'description' => $this->faker->paragraph()
+            'description' => $this->faker->paragraph(),
+            'owner_id' => function () {
+                return User::class::factory()->create()->id;
+            }
         ];
     }
 }
