@@ -17,6 +17,8 @@ module.exports = {
       indigo: colors.indigo,
       red: colors.rose,
       yellow: colors.amber,
+      blue: '#47cdff',
+      bluelight: '#8ae2fe',
     },
     textColor: theme => theme('colors'),
     extend: {
@@ -25,6 +27,7 @@ module.exports = {
       // }
       textColor: {
         'grey': 'rgba(0, 0, 0, 0.4)',
+        'blue': '#47cdff',
       }
     },
   },
