@@ -13,15 +13,16 @@ class CreateProjectsTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('owner_id');
             $table->string('title');
             $table->text('description');
             $table->timestamps();
-
+            $table->bigInteger('owner_id')->unsigned();
             $table->foreign('owner_id')->references('id')->on('users')->onDelete('cascade');
         });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -31,6 +32,8 @@ class CreateProjectsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('projects');
+        Schema::enableForeignKeyConstraints();
     }
 }
