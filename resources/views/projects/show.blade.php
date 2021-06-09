@@ -4,10 +4,10 @@
     <header class="flex items-center mb-3 py-4">
         <div class="flex justify-between items-end w-full">
             <p class="text-grey text-sm font-normal">
-                <a href="/projects" class="text-grey text-sm font-normal no-underline">My Projects</a> \ {{ $project->title }}
+                <a href="/projects" class="text-grey text-sm font-normal no-underline">My Projects</a> / {{ $project->title }}
             </p>
 
-            <a href="/projects/create" class="button">New Project</a>
+            <a href="{{ $project->path() . '/edit' }}" class="button">Edit Project</a>
         </div>
     </header>
 
@@ -20,8 +20,8 @@
                     @foreach ($project->tasks as $task)
                         <div class="card mb-3">
                             <form method="POST" action="{{ $task->path() }}">
-                                @method('PATCH')
                                 @csrf
+                                @method('PATCH')
 
                                 <div class="flex">
                                     <input name="body" value="{{ $task->body }}" class="w-full {{ $task->completed ? 'text-grey' : '' }}">
