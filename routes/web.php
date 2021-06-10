@@ -3,6 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ProjectTasksController;
+
+\App\Models\Project::created(function ($project) {
+    \App\Models\Activity::create([
+        'project_id' => $project->id,
+        'description' => 'created'
+    ]);
+});
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
