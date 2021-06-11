@@ -9,10 +9,9 @@ use Illuminate\Support\Arr;
 
 class Project extends Model
 {
+    use RecordsActivity;
     use HasFactory;
     protected $guarded = [];
-
-    public $old = [];
 
     public function path() {
         return "/projects/{$this->id}";
@@ -28,26 +27,6 @@ class Project extends Model
 
     public function addTask($body) {
         return $this->tasks()->create(compact('body'));
-    }
-
-    public function recordActivity($description) {
-        $this->activity()->create([
-            'description' => $description,
-            'changes' => $this->activityChanges($description)
-        ]);
-    }
-
-    protected function activityChanges($description) {
-        if ($description == 'updated') {
-            return [
-                'before' => Arr::except(array_diff($this->old, $this->getAttributes()), 'updated_at'),
-                'after' => Arr::except($this->getChanges(), 'updated_at')
-            ];
-        }
-    }
-
-    public function activity() {
-        return $this->hasMany(Activity::class)->latest();
     }
 
     protected static function newFactory() {
