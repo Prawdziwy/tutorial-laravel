@@ -5,11 +5,14 @@ namespace App\Models;
 use App\Models\Activity;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
 
 class Project extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public $old = [];
 
     public function path() {
         return "/projects/{$this->id}";
@@ -28,7 +31,19 @@ class Project extends Model
     }
 
     public function recordActivity($description) {
-        $this->activity()->create(compact('description'));
+        $this->activity()->create([
+            'description' => $description,
+            'changes' => $this->activityChanges($description)
+        ]);
+    }
+
+    protected function activityChanges($description) {
+        if ($description == 'updated') {
+            return [
+                'before' => Arr::except(array_diff($this->old, $this->getAttributes()), 'updated_at'),
+                'after' => Arr::except($this->getChanges(), 'updated_at')
+            ];
+        }
     }
 
     public function activity() {
