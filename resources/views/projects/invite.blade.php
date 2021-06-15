@@ -13,5 +13,5 @@
         <button type="submit" class="button">Invite</button>
     </form>
 
-    @include ('errors', ['bag' => 'invitations'])
+    @include ('projects.errors', ['bag' => 'invitations'])
 </div>
