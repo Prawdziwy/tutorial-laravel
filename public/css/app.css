@@ -1523,6 +1523,10 @@ video {
   border-color: var(--text-muted-light-color);
 }
 
+.divide-error > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--text-error-color);
+}
+
 .divide-solid > :not([hidden]) ~ :not([hidden]) {
   border-style: solid;
 }
@@ -1868,6 +1872,11 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
+.from-error {
+  --tw-gradient-from: var(--text-error-color);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+}
+
 .via-default {
   --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
@@ -1888,6 +1897,10 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
+.via-error {
+  --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+}
+
 .to-default {
   --tw-gradient-to: var(--text-default-color);
 }
@@ -1906,6 +1919,10 @@ video {
 
 .to-muted-light {
   --tw-gradient-to: var(--text-muted-light-color);
+}
+
+.to-error {
+  --tw-gradient-to: var(--text-error-color);
 }
 
 .hover\:from-default:hover {
@@ -1933,6 +1950,11 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
+.hover\:from-error:hover {
+  --tw-gradient-from: var(--text-error-color);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+}
+
 .hover\:via-default:hover {
   --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
@@ -1953,6 +1975,10 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
+.hover\:via-error:hover {
+  --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+}
+
 .hover\:to-default:hover {
   --tw-gradient-to: var(--text-default-color);
 }
@@ -1971,6 +1997,10 @@ video {
 
 .hover\:to-muted-light:hover {
   --tw-gradient-to: var(--text-muted-light-color);
+}
+
+.hover\:to-error:hover {
+  --tw-gradient-to: var(--text-error-color);
 }
 
 .focus\:from-default:focus {
@@ -1998,6 +2028,11 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
+.focus\:from-error:focus {
+  --tw-gradient-from: var(--text-error-color);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+}
+
 .focus\:via-default:focus {
   --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
@@ -2018,6 +2053,10 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
+.focus\:via-error:focus {
+  --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+}
+
 .focus\:to-default:focus {
   --tw-gradient-to: var(--text-default-color);
 }
@@ -2036,6 +2075,10 @@ video {
 
 .focus\:to-muted-light:focus {
   --tw-gradient-to: var(--text-muted-light-color);
+}
+
+.focus\:to-error:focus {
+  --tw-gradient-to: var(--text-error-color);
 }
 
 .bg-opacity-0 {
@@ -2438,6 +2481,10 @@ video {
   border-color: var(--text-muted-light-color);
 }
 
+.border-error {
+  border-color: var(--text-error-color);
+}
+
 .group:hover .group-hover\:border-default {
   border-color: var(--text-default-color);
 }
@@ -2456,6 +2503,10 @@ video {
 
 .group:hover .group-hover\:border-muted-light {
   border-color: var(--text-muted-light-color);
+}
+
+.group:hover .group-hover\:border-error {
+  border-color: var(--text-error-color);
 }
 
 .focus-within\:border-default:focus-within {
@@ -2478,6 +2529,10 @@ video {
   border-color: var(--text-muted-light-color);
 }
 
+.focus-within\:border-error:focus-within {
+  border-color: var(--text-error-color);
+}
+
 .hover\:border-default:hover {
   border-color: var(--text-default-color);
 }
@@ -2498,6 +2553,10 @@ video {
   border-color: var(--text-muted-light-color);
 }
 
+.hover\:border-error:hover {
+  border-color: var(--text-error-color);
+}
+
 .focus\:border-default:focus {
   border-color: var(--text-default-color);
 }
@@ -2516,6 +2575,10 @@ video {
 
 .focus\:border-muted-light:focus {
   border-color: var(--text-muted-light-color);
+}
+
+.focus\:border-error:focus {
+  border-color: var(--text-error-color);
 }
 
 .border-opacity-0 {
@@ -8183,6 +8246,18 @@ video {
   color: var(--text-muted-light-color);
 }
 
+.placeholder-error::-moz-placeholder {
+  color: var(--text-error-color);
+}
+
+.placeholder-error:-ms-input-placeholder {
+  color: var(--text-error-color);
+}
+
+.placeholder-error::placeholder {
+  color: var(--text-error-color);
+}
+
 .focus\:placeholder-default:focus::-moz-placeholder {
   color: var(--text-default-color);
 }
@@ -8241,6 +8316,18 @@ video {
 
 .focus\:placeholder-muted-light:focus::placeholder {
   color: var(--text-muted-light-color);
+}
+
+.focus\:placeholder-error:focus::-moz-placeholder {
+  color: var(--text-error-color);
+}
+
+.focus\:placeholder-error:focus:-ms-input-placeholder {
+  color: var(--text-error-color);
+}
+
+.focus\:placeholder-error:focus::placeholder {
+  color: var(--text-error-color);
 }
 
 .placeholder-opacity-0::-moz-placeholder {
@@ -11630,6 +11717,10 @@ video {
   --tw-ring-offset-color: var(--text-muted-light-color);
 }
 
+.ring-offset-error {
+  --tw-ring-offset-color: var(--text-error-color);
+}
+
 .focus-within\:ring-offset-default:focus-within {
   --tw-ring-offset-color: var(--text-default-color);
 }
@@ -11650,6 +11741,10 @@ video {
   --tw-ring-offset-color: var(--text-muted-light-color);
 }
 
+.focus-within\:ring-offset-error:focus-within {
+  --tw-ring-offset-color: var(--text-error-color);
+}
+
 .focus\:ring-offset-default:focus {
   --tw-ring-offset-color: var(--text-default-color);
 }
@@ -11668,6 +11763,10 @@ video {
 
 .focus\:ring-offset-muted-light:focus {
   --tw-ring-offset-color: var(--text-muted-light-color);
+}
+
+.focus\:ring-offset-error:focus {
+  --tw-ring-offset-color: var(--text-error-color);
 }
 
 .ring-offset-0 {
@@ -11750,6 +11849,10 @@ video {
   --tw-ring-color: var(--text-muted-light-color);
 }
 
+.ring-error {
+  --tw-ring-color: var(--text-error-color);
+}
+
 .focus-within\:ring-default:focus-within {
   --tw-ring-color: var(--text-default-color);
 }
@@ -11770,6 +11873,10 @@ video {
   --tw-ring-color: var(--text-muted-light-color);
 }
 
+.focus-within\:ring-error:focus-within {
+  --tw-ring-color: var(--text-error-color);
+}
+
 .focus\:ring-default:focus {
   --tw-ring-color: var(--text-default-color);
 }
@@ -11788,6 +11895,10 @@ video {
 
 .focus\:ring-muted-light:focus {
   --tw-ring-color: var(--text-muted-light-color);
+}
+
+.focus\:ring-error:focus {
+  --tw-ring-color: var(--text-error-color);
 }
 
 .ring-opacity-0 {
@@ -12034,6 +12145,10 @@ video {
   color: var(--text-muted-light-color);
 }
 
+.text-error {
+  color: var(--text-error-color);
+}
+
 .text-grey {
   color: rgba(0, 0, 0, 0.4);
 }
@@ -12061,6 +12176,10 @@ video {
 
 .group:hover .group-hover\:text-muted-light {
   color: var(--text-muted-light-color);
+}
+
+.group:hover .group-hover\:text-error {
+  color: var(--text-error-color);
 }
 
 .group:hover .group-hover\:text-grey {
@@ -12092,6 +12211,10 @@ video {
   color: var(--text-muted-light-color);
 }
 
+.focus-within\:text-error:focus-within {
+  color: var(--text-error-color);
+}
+
 .focus-within\:text-grey:focus-within {
   color: rgba(0, 0, 0, 0.4);
 }
@@ -12121,6 +12244,10 @@ video {
   color: var(--text-muted-light-color);
 }
 
+.hover\:text-error:hover {
+  color: var(--text-error-color);
+}
+
 .hover\:text-grey:hover {
   color: rgba(0, 0, 0, 0.4);
 }
@@ -12148,6 +12275,10 @@ video {
 
 .focus\:text-muted-light:focus {
   color: var(--text-muted-light-color);
+}
+
+.focus\:text-error:focus {
+  color: var(--text-error-color);
 }
 
 .focus\:text-grey:focus {
@@ -17735,6 +17866,7 @@ video {
   --text-muted-color: rgba(0, 0, 0, 0.3);
   --text-muted-light-color: rgba(255, 255, 255, 0.1);
   --text-muted-light-color: #e1e6e8;
+  --text-error-color: red;
 }
 
 .theme-dark {
@@ -17747,6 +17879,7 @@ video {
   --text-muted-light-color: rgba(255, 255, 255, 0.3);
   --text-accent-color: #47cdff;
   --text-accent-light-color: #8ae2fe;
+  --text-error-color: red;
 }
 
 .button {
@@ -18765,6 +18898,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .sm\:divide-error > :not([hidden]) ~ :not([hidden]) {
+    border-color: var(--text-error-color);
+  }
+
   .sm\:divide-solid > :not([hidden]) ~ :not([hidden]) {
     border-style: solid;
   }
@@ -19110,6 +19247,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .sm\:from-error {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .sm\:via-default {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -19130,6 +19272,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .sm\:via-error {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .sm\:to-default {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -19148,6 +19294,10 @@ body, button {
 
   .sm\:to-muted-light {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .sm\:to-error {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .sm\:hover\:from-default:hover {
@@ -19175,6 +19325,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .sm\:hover\:from-error:hover {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .sm\:hover\:via-default:hover {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -19195,6 +19350,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .sm\:hover\:via-error:hover {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .sm\:hover\:to-default:hover {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -19213,6 +19372,10 @@ body, button {
 
   .sm\:hover\:to-muted-light:hover {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .sm\:hover\:to-error:hover {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .sm\:focus\:from-default:focus {
@@ -19240,6 +19403,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .sm\:focus\:from-error:focus {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .sm\:focus\:via-default:focus {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -19260,6 +19428,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .sm\:focus\:via-error:focus {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .sm\:focus\:to-default:focus {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -19278,6 +19450,10 @@ body, button {
 
   .sm\:focus\:to-muted-light:focus {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .sm\:focus\:to-error:focus {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .sm\:bg-opacity-0 {
@@ -19680,6 +19856,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .sm\:border-error {
+    border-color: var(--text-error-color);
+  }
+
   .group:hover .sm\:group-hover\:border-default {
     border-color: var(--text-default-color);
   }
@@ -19698,6 +19878,10 @@ body, button {
 
   .group:hover .sm\:group-hover\:border-muted-light {
     border-color: var(--text-muted-light-color);
+  }
+
+  .group:hover .sm\:group-hover\:border-error {
+    border-color: var(--text-error-color);
   }
 
   .sm\:focus-within\:border-default:focus-within {
@@ -19720,6 +19904,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .sm\:focus-within\:border-error:focus-within {
+    border-color: var(--text-error-color);
+  }
+
   .sm\:hover\:border-default:hover {
     border-color: var(--text-default-color);
   }
@@ -19740,6 +19928,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .sm\:hover\:border-error:hover {
+    border-color: var(--text-error-color);
+  }
+
   .sm\:focus\:border-default:focus {
     border-color: var(--text-default-color);
   }
@@ -19758,6 +19950,10 @@ body, button {
 
   .sm\:focus\:border-muted-light:focus {
     border-color: var(--text-muted-light-color);
+  }
+
+  .sm\:focus\:border-error:focus {
+    border-color: var(--text-error-color);
   }
 
   .sm\:border-opacity-0 {
@@ -25425,6 +25621,18 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .sm\:placeholder-error::-moz-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .sm\:placeholder-error:-ms-input-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .sm\:placeholder-error::placeholder {
+    color: var(--text-error-color);
+  }
+
   .sm\:focus\:placeholder-default:focus::-moz-placeholder {
     color: var(--text-default-color);
   }
@@ -25483,6 +25691,18 @@ body, button {
 
   .sm\:focus\:placeholder-muted-light:focus::placeholder {
     color: var(--text-muted-light-color);
+  }
+
+  .sm\:focus\:placeholder-error:focus::-moz-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .sm\:focus\:placeholder-error:focus:-ms-input-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .sm\:focus\:placeholder-error:focus::placeholder {
+    color: var(--text-error-color);
   }
 
   .sm\:placeholder-opacity-0::-moz-placeholder {
@@ -28859,6 +29079,10 @@ body, button {
     --tw-ring-offset-color: var(--text-muted-light-color);
   }
 
+  .sm\:ring-offset-error {
+    --tw-ring-offset-color: var(--text-error-color);
+  }
+
   .sm\:focus-within\:ring-offset-default:focus-within {
     --tw-ring-offset-color: var(--text-default-color);
   }
@@ -28879,6 +29103,10 @@ body, button {
     --tw-ring-offset-color: var(--text-muted-light-color);
   }
 
+  .sm\:focus-within\:ring-offset-error:focus-within {
+    --tw-ring-offset-color: var(--text-error-color);
+  }
+
   .sm\:focus\:ring-offset-default:focus {
     --tw-ring-offset-color: var(--text-default-color);
   }
@@ -28897,6 +29125,10 @@ body, button {
 
   .sm\:focus\:ring-offset-muted-light:focus {
     --tw-ring-offset-color: var(--text-muted-light-color);
+  }
+
+  .sm\:focus\:ring-offset-error:focus {
+    --tw-ring-offset-color: var(--text-error-color);
   }
 
   .sm\:ring-offset-0 {
@@ -28979,6 +29211,10 @@ body, button {
     --tw-ring-color: var(--text-muted-light-color);
   }
 
+  .sm\:ring-error {
+    --tw-ring-color: var(--text-error-color);
+  }
+
   .sm\:focus-within\:ring-default:focus-within {
     --tw-ring-color: var(--text-default-color);
   }
@@ -28999,6 +29235,10 @@ body, button {
     --tw-ring-color: var(--text-muted-light-color);
   }
 
+  .sm\:focus-within\:ring-error:focus-within {
+    --tw-ring-color: var(--text-error-color);
+  }
+
   .sm\:focus\:ring-default:focus {
     --tw-ring-color: var(--text-default-color);
   }
@@ -29017,6 +29257,10 @@ body, button {
 
   .sm\:focus\:ring-muted-light:focus {
     --tw-ring-color: var(--text-muted-light-color);
+  }
+
+  .sm\:focus\:ring-error:focus {
+    --tw-ring-color: var(--text-error-color);
   }
 
   .sm\:ring-opacity-0 {
@@ -29263,6 +29507,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .sm\:text-error {
+    color: var(--text-error-color);
+  }
+
   .sm\:text-grey {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -29290,6 +29538,10 @@ body, button {
 
   .group:hover .sm\:group-hover\:text-muted-light {
     color: var(--text-muted-light-color);
+  }
+
+  .group:hover .sm\:group-hover\:text-error {
+    color: var(--text-error-color);
   }
 
   .group:hover .sm\:group-hover\:text-grey {
@@ -29321,6 +29573,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .sm\:focus-within\:text-error:focus-within {
+    color: var(--text-error-color);
+  }
+
   .sm\:focus-within\:text-grey:focus-within {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -29350,6 +29606,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .sm\:hover\:text-error:hover {
+    color: var(--text-error-color);
+  }
+
   .sm\:hover\:text-grey:hover {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -29377,6 +29637,10 @@ body, button {
 
   .sm\:focus\:text-muted-light:focus {
     color: var(--text-muted-light-color);
+  }
+
+  .sm\:focus\:text-error:focus {
+    color: var(--text-error-color);
   }
 
   .sm\:focus\:text-grey:focus {
@@ -35767,6 +36031,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .md\:divide-error > :not([hidden]) ~ :not([hidden]) {
+    border-color: var(--text-error-color);
+  }
+
   .md\:divide-solid > :not([hidden]) ~ :not([hidden]) {
     border-style: solid;
   }
@@ -36112,6 +36380,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .md\:from-error {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .md\:via-default {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -36132,6 +36405,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .md\:via-error {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .md\:to-default {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -36150,6 +36427,10 @@ body, button {
 
   .md\:to-muted-light {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .md\:to-error {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .md\:hover\:from-default:hover {
@@ -36177,6 +36458,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .md\:hover\:from-error:hover {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .md\:hover\:via-default:hover {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -36197,6 +36483,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .md\:hover\:via-error:hover {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .md\:hover\:to-default:hover {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -36215,6 +36505,10 @@ body, button {
 
   .md\:hover\:to-muted-light:hover {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .md\:hover\:to-error:hover {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .md\:focus\:from-default:focus {
@@ -36242,6 +36536,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .md\:focus\:from-error:focus {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .md\:focus\:via-default:focus {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -36262,6 +36561,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .md\:focus\:via-error:focus {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .md\:focus\:to-default:focus {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -36280,6 +36583,10 @@ body, button {
 
   .md\:focus\:to-muted-light:focus {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .md\:focus\:to-error:focus {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .md\:bg-opacity-0 {
@@ -36682,6 +36989,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .md\:border-error {
+    border-color: var(--text-error-color);
+  }
+
   .group:hover .md\:group-hover\:border-default {
     border-color: var(--text-default-color);
   }
@@ -36700,6 +37011,10 @@ body, button {
 
   .group:hover .md\:group-hover\:border-muted-light {
     border-color: var(--text-muted-light-color);
+  }
+
+  .group:hover .md\:group-hover\:border-error {
+    border-color: var(--text-error-color);
   }
 
   .md\:focus-within\:border-default:focus-within {
@@ -36722,6 +37037,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .md\:focus-within\:border-error:focus-within {
+    border-color: var(--text-error-color);
+  }
+
   .md\:hover\:border-default:hover {
     border-color: var(--text-default-color);
   }
@@ -36742,6 +37061,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .md\:hover\:border-error:hover {
+    border-color: var(--text-error-color);
+  }
+
   .md\:focus\:border-default:focus {
     border-color: var(--text-default-color);
   }
@@ -36760,6 +37083,10 @@ body, button {
 
   .md\:focus\:border-muted-light:focus {
     border-color: var(--text-muted-light-color);
+  }
+
+  .md\:focus\:border-error:focus {
+    border-color: var(--text-error-color);
   }
 
   .md\:border-opacity-0 {
@@ -42427,6 +42754,18 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .md\:placeholder-error::-moz-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .md\:placeholder-error:-ms-input-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .md\:placeholder-error::placeholder {
+    color: var(--text-error-color);
+  }
+
   .md\:focus\:placeholder-default:focus::-moz-placeholder {
     color: var(--text-default-color);
   }
@@ -42485,6 +42824,18 @@ body, button {
 
   .md\:focus\:placeholder-muted-light:focus::placeholder {
     color: var(--text-muted-light-color);
+  }
+
+  .md\:focus\:placeholder-error:focus::-moz-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .md\:focus\:placeholder-error:focus:-ms-input-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .md\:focus\:placeholder-error:focus::placeholder {
+    color: var(--text-error-color);
   }
 
   .md\:placeholder-opacity-0::-moz-placeholder {
@@ -45861,6 +46212,10 @@ body, button {
     --tw-ring-offset-color: var(--text-muted-light-color);
   }
 
+  .md\:ring-offset-error {
+    --tw-ring-offset-color: var(--text-error-color);
+  }
+
   .md\:focus-within\:ring-offset-default:focus-within {
     --tw-ring-offset-color: var(--text-default-color);
   }
@@ -45881,6 +46236,10 @@ body, button {
     --tw-ring-offset-color: var(--text-muted-light-color);
   }
 
+  .md\:focus-within\:ring-offset-error:focus-within {
+    --tw-ring-offset-color: var(--text-error-color);
+  }
+
   .md\:focus\:ring-offset-default:focus {
     --tw-ring-offset-color: var(--text-default-color);
   }
@@ -45899,6 +46258,10 @@ body, button {
 
   .md\:focus\:ring-offset-muted-light:focus {
     --tw-ring-offset-color: var(--text-muted-light-color);
+  }
+
+  .md\:focus\:ring-offset-error:focus {
+    --tw-ring-offset-color: var(--text-error-color);
   }
 
   .md\:ring-offset-0 {
@@ -45981,6 +46344,10 @@ body, button {
     --tw-ring-color: var(--text-muted-light-color);
   }
 
+  .md\:ring-error {
+    --tw-ring-color: var(--text-error-color);
+  }
+
   .md\:focus-within\:ring-default:focus-within {
     --tw-ring-color: var(--text-default-color);
   }
@@ -46001,6 +46368,10 @@ body, button {
     --tw-ring-color: var(--text-muted-light-color);
   }
 
+  .md\:focus-within\:ring-error:focus-within {
+    --tw-ring-color: var(--text-error-color);
+  }
+
   .md\:focus\:ring-default:focus {
     --tw-ring-color: var(--text-default-color);
   }
@@ -46019,6 +46390,10 @@ body, button {
 
   .md\:focus\:ring-muted-light:focus {
     --tw-ring-color: var(--text-muted-light-color);
+  }
+
+  .md\:focus\:ring-error:focus {
+    --tw-ring-color: var(--text-error-color);
   }
 
   .md\:ring-opacity-0 {
@@ -46265,6 +46640,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .md\:text-error {
+    color: var(--text-error-color);
+  }
+
   .md\:text-grey {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -46292,6 +46671,10 @@ body, button {
 
   .group:hover .md\:group-hover\:text-muted-light {
     color: var(--text-muted-light-color);
+  }
+
+  .group:hover .md\:group-hover\:text-error {
+    color: var(--text-error-color);
   }
 
   .group:hover .md\:group-hover\:text-grey {
@@ -46323,6 +46706,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .md\:focus-within\:text-error:focus-within {
+    color: var(--text-error-color);
+  }
+
   .md\:focus-within\:text-grey:focus-within {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -46352,6 +46739,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .md\:hover\:text-error:hover {
+    color: var(--text-error-color);
+  }
+
   .md\:hover\:text-grey:hover {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -46379,6 +46770,10 @@ body, button {
 
   .md\:focus\:text-muted-light:focus {
     color: var(--text-muted-light-color);
+  }
+
+  .md\:focus\:text-error:focus {
+    color: var(--text-error-color);
   }
 
   .md\:focus\:text-grey:focus {
@@ -52769,6 +53164,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .lg\:divide-error > :not([hidden]) ~ :not([hidden]) {
+    border-color: var(--text-error-color);
+  }
+
   .lg\:divide-solid > :not([hidden]) ~ :not([hidden]) {
     border-style: solid;
   }
@@ -53114,6 +53513,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .lg\:from-error {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .lg\:via-default {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -53134,6 +53538,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .lg\:via-error {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .lg\:to-default {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -53152,6 +53560,10 @@ body, button {
 
   .lg\:to-muted-light {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .lg\:to-error {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .lg\:hover\:from-default:hover {
@@ -53179,6 +53591,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .lg\:hover\:from-error:hover {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .lg\:hover\:via-default:hover {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -53199,6 +53616,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .lg\:hover\:via-error:hover {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .lg\:hover\:to-default:hover {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -53217,6 +53638,10 @@ body, button {
 
   .lg\:hover\:to-muted-light:hover {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .lg\:hover\:to-error:hover {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .lg\:focus\:from-default:focus {
@@ -53244,6 +53669,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .lg\:focus\:from-error:focus {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .lg\:focus\:via-default:focus {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -53264,6 +53694,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .lg\:focus\:via-error:focus {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .lg\:focus\:to-default:focus {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -53282,6 +53716,10 @@ body, button {
 
   .lg\:focus\:to-muted-light:focus {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .lg\:focus\:to-error:focus {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .lg\:bg-opacity-0 {
@@ -53684,6 +54122,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .lg\:border-error {
+    border-color: var(--text-error-color);
+  }
+
   .group:hover .lg\:group-hover\:border-default {
     border-color: var(--text-default-color);
   }
@@ -53702,6 +54144,10 @@ body, button {
 
   .group:hover .lg\:group-hover\:border-muted-light {
     border-color: var(--text-muted-light-color);
+  }
+
+  .group:hover .lg\:group-hover\:border-error {
+    border-color: var(--text-error-color);
   }
 
   .lg\:focus-within\:border-default:focus-within {
@@ -53724,6 +54170,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .lg\:focus-within\:border-error:focus-within {
+    border-color: var(--text-error-color);
+  }
+
   .lg\:hover\:border-default:hover {
     border-color: var(--text-default-color);
   }
@@ -53744,6 +54194,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .lg\:hover\:border-error:hover {
+    border-color: var(--text-error-color);
+  }
+
   .lg\:focus\:border-default:focus {
     border-color: var(--text-default-color);
   }
@@ -53762,6 +54216,10 @@ body, button {
 
   .lg\:focus\:border-muted-light:focus {
     border-color: var(--text-muted-light-color);
+  }
+
+  .lg\:focus\:border-error:focus {
+    border-color: var(--text-error-color);
   }
 
   .lg\:border-opacity-0 {
@@ -59429,6 +59887,18 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .lg\:placeholder-error::-moz-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .lg\:placeholder-error:-ms-input-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .lg\:placeholder-error::placeholder {
+    color: var(--text-error-color);
+  }
+
   .lg\:focus\:placeholder-default:focus::-moz-placeholder {
     color: var(--text-default-color);
   }
@@ -59487,6 +59957,18 @@ body, button {
 
   .lg\:focus\:placeholder-muted-light:focus::placeholder {
     color: var(--text-muted-light-color);
+  }
+
+  .lg\:focus\:placeholder-error:focus::-moz-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .lg\:focus\:placeholder-error:focus:-ms-input-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .lg\:focus\:placeholder-error:focus::placeholder {
+    color: var(--text-error-color);
   }
 
   .lg\:placeholder-opacity-0::-moz-placeholder {
@@ -62863,6 +63345,10 @@ body, button {
     --tw-ring-offset-color: var(--text-muted-light-color);
   }
 
+  .lg\:ring-offset-error {
+    --tw-ring-offset-color: var(--text-error-color);
+  }
+
   .lg\:focus-within\:ring-offset-default:focus-within {
     --tw-ring-offset-color: var(--text-default-color);
   }
@@ -62883,6 +63369,10 @@ body, button {
     --tw-ring-offset-color: var(--text-muted-light-color);
   }
 
+  .lg\:focus-within\:ring-offset-error:focus-within {
+    --tw-ring-offset-color: var(--text-error-color);
+  }
+
   .lg\:focus\:ring-offset-default:focus {
     --tw-ring-offset-color: var(--text-default-color);
   }
@@ -62901,6 +63391,10 @@ body, button {
 
   .lg\:focus\:ring-offset-muted-light:focus {
     --tw-ring-offset-color: var(--text-muted-light-color);
+  }
+
+  .lg\:focus\:ring-offset-error:focus {
+    --tw-ring-offset-color: var(--text-error-color);
   }
 
   .lg\:ring-offset-0 {
@@ -62983,6 +63477,10 @@ body, button {
     --tw-ring-color: var(--text-muted-light-color);
   }
 
+  .lg\:ring-error {
+    --tw-ring-color: var(--text-error-color);
+  }
+
   .lg\:focus-within\:ring-default:focus-within {
     --tw-ring-color: var(--text-default-color);
   }
@@ -63003,6 +63501,10 @@ body, button {
     --tw-ring-color: var(--text-muted-light-color);
   }
 
+  .lg\:focus-within\:ring-error:focus-within {
+    --tw-ring-color: var(--text-error-color);
+  }
+
   .lg\:focus\:ring-default:focus {
     --tw-ring-color: var(--text-default-color);
   }
@@ -63021,6 +63523,10 @@ body, button {
 
   .lg\:focus\:ring-muted-light:focus {
     --tw-ring-color: var(--text-muted-light-color);
+  }
+
+  .lg\:focus\:ring-error:focus {
+    --tw-ring-color: var(--text-error-color);
   }
 
   .lg\:ring-opacity-0 {
@@ -63267,6 +63773,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .lg\:text-error {
+    color: var(--text-error-color);
+  }
+
   .lg\:text-grey {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -63294,6 +63804,10 @@ body, button {
 
   .group:hover .lg\:group-hover\:text-muted-light {
     color: var(--text-muted-light-color);
+  }
+
+  .group:hover .lg\:group-hover\:text-error {
+    color: var(--text-error-color);
   }
 
   .group:hover .lg\:group-hover\:text-grey {
@@ -63325,6 +63839,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .lg\:focus-within\:text-error:focus-within {
+    color: var(--text-error-color);
+  }
+
   .lg\:focus-within\:text-grey:focus-within {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -63354,6 +63872,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .lg\:hover\:text-error:hover {
+    color: var(--text-error-color);
+  }
+
   .lg\:hover\:text-grey:hover {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -63381,6 +63903,10 @@ body, button {
 
   .lg\:focus\:text-muted-light:focus {
     color: var(--text-muted-light-color);
+  }
+
+  .lg\:focus\:text-error:focus {
+    color: var(--text-error-color);
   }
 
   .lg\:focus\:text-grey:focus {
@@ -69771,6 +70297,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .xl\:divide-error > :not([hidden]) ~ :not([hidden]) {
+    border-color: var(--text-error-color);
+  }
+
   .xl\:divide-solid > :not([hidden]) ~ :not([hidden]) {
     border-style: solid;
   }
@@ -70116,6 +70646,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .xl\:from-error {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .xl\:via-default {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -70136,6 +70671,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .xl\:via-error {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .xl\:to-default {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -70154,6 +70693,10 @@ body, button {
 
   .xl\:to-muted-light {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .xl\:to-error {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .xl\:hover\:from-default:hover {
@@ -70181,6 +70724,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .xl\:hover\:from-error:hover {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .xl\:hover\:via-default:hover {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -70201,6 +70749,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .xl\:hover\:via-error:hover {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .xl\:hover\:to-default:hover {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -70219,6 +70771,10 @@ body, button {
 
   .xl\:hover\:to-muted-light:hover {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .xl\:hover\:to-error:hover {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .xl\:focus\:from-default:focus {
@@ -70246,6 +70802,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .xl\:focus\:from-error:focus {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .xl\:focus\:via-default:focus {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -70266,6 +70827,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .xl\:focus\:via-error:focus {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .xl\:focus\:to-default:focus {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -70284,6 +70849,10 @@ body, button {
 
   .xl\:focus\:to-muted-light:focus {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .xl\:focus\:to-error:focus {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .xl\:bg-opacity-0 {
@@ -70686,6 +71255,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .xl\:border-error {
+    border-color: var(--text-error-color);
+  }
+
   .group:hover .xl\:group-hover\:border-default {
     border-color: var(--text-default-color);
   }
@@ -70704,6 +71277,10 @@ body, button {
 
   .group:hover .xl\:group-hover\:border-muted-light {
     border-color: var(--text-muted-light-color);
+  }
+
+  .group:hover .xl\:group-hover\:border-error {
+    border-color: var(--text-error-color);
   }
 
   .xl\:focus-within\:border-default:focus-within {
@@ -70726,6 +71303,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .xl\:focus-within\:border-error:focus-within {
+    border-color: var(--text-error-color);
+  }
+
   .xl\:hover\:border-default:hover {
     border-color: var(--text-default-color);
   }
@@ -70746,6 +71327,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .xl\:hover\:border-error:hover {
+    border-color: var(--text-error-color);
+  }
+
   .xl\:focus\:border-default:focus {
     border-color: var(--text-default-color);
   }
@@ -70764,6 +71349,10 @@ body, button {
 
   .xl\:focus\:border-muted-light:focus {
     border-color: var(--text-muted-light-color);
+  }
+
+  .xl\:focus\:border-error:focus {
+    border-color: var(--text-error-color);
   }
 
   .xl\:border-opacity-0 {
@@ -76431,6 +77020,18 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .xl\:placeholder-error::-moz-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .xl\:placeholder-error:-ms-input-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .xl\:placeholder-error::placeholder {
+    color: var(--text-error-color);
+  }
+
   .xl\:focus\:placeholder-default:focus::-moz-placeholder {
     color: var(--text-default-color);
   }
@@ -76489,6 +77090,18 @@ body, button {
 
   .xl\:focus\:placeholder-muted-light:focus::placeholder {
     color: var(--text-muted-light-color);
+  }
+
+  .xl\:focus\:placeholder-error:focus::-moz-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .xl\:focus\:placeholder-error:focus:-ms-input-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .xl\:focus\:placeholder-error:focus::placeholder {
+    color: var(--text-error-color);
   }
 
   .xl\:placeholder-opacity-0::-moz-placeholder {
@@ -79865,6 +80478,10 @@ body, button {
     --tw-ring-offset-color: var(--text-muted-light-color);
   }
 
+  .xl\:ring-offset-error {
+    --tw-ring-offset-color: var(--text-error-color);
+  }
+
   .xl\:focus-within\:ring-offset-default:focus-within {
     --tw-ring-offset-color: var(--text-default-color);
   }
@@ -79885,6 +80502,10 @@ body, button {
     --tw-ring-offset-color: var(--text-muted-light-color);
   }
 
+  .xl\:focus-within\:ring-offset-error:focus-within {
+    --tw-ring-offset-color: var(--text-error-color);
+  }
+
   .xl\:focus\:ring-offset-default:focus {
     --tw-ring-offset-color: var(--text-default-color);
   }
@@ -79903,6 +80524,10 @@ body, button {
 
   .xl\:focus\:ring-offset-muted-light:focus {
     --tw-ring-offset-color: var(--text-muted-light-color);
+  }
+
+  .xl\:focus\:ring-offset-error:focus {
+    --tw-ring-offset-color: var(--text-error-color);
   }
 
   .xl\:ring-offset-0 {
@@ -79985,6 +80610,10 @@ body, button {
     --tw-ring-color: var(--text-muted-light-color);
   }
 
+  .xl\:ring-error {
+    --tw-ring-color: var(--text-error-color);
+  }
+
   .xl\:focus-within\:ring-default:focus-within {
     --tw-ring-color: var(--text-default-color);
   }
@@ -80005,6 +80634,10 @@ body, button {
     --tw-ring-color: var(--text-muted-light-color);
   }
 
+  .xl\:focus-within\:ring-error:focus-within {
+    --tw-ring-color: var(--text-error-color);
+  }
+
   .xl\:focus\:ring-default:focus {
     --tw-ring-color: var(--text-default-color);
   }
@@ -80023,6 +80656,10 @@ body, button {
 
   .xl\:focus\:ring-muted-light:focus {
     --tw-ring-color: var(--text-muted-light-color);
+  }
+
+  .xl\:focus\:ring-error:focus {
+    --tw-ring-color: var(--text-error-color);
   }
 
   .xl\:ring-opacity-0 {
@@ -80269,6 +80906,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .xl\:text-error {
+    color: var(--text-error-color);
+  }
+
   .xl\:text-grey {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -80296,6 +80937,10 @@ body, button {
 
   .group:hover .xl\:group-hover\:text-muted-light {
     color: var(--text-muted-light-color);
+  }
+
+  .group:hover .xl\:group-hover\:text-error {
+    color: var(--text-error-color);
   }
 
   .group:hover .xl\:group-hover\:text-grey {
@@ -80327,6 +80972,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .xl\:focus-within\:text-error:focus-within {
+    color: var(--text-error-color);
+  }
+
   .xl\:focus-within\:text-grey:focus-within {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -80356,6 +81005,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .xl\:hover\:text-error:hover {
+    color: var(--text-error-color);
+  }
+
   .xl\:hover\:text-grey:hover {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -80383,6 +81036,10 @@ body, button {
 
   .xl\:focus\:text-muted-light:focus {
     color: var(--text-muted-light-color);
+  }
+
+  .xl\:focus\:text-error:focus {
+    color: var(--text-error-color);
   }
 
   .xl\:focus\:text-grey:focus {
@@ -86773,6 +87430,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .\32xl\:divide-error > :not([hidden]) ~ :not([hidden]) {
+    border-color: var(--text-error-color);
+  }
+
   .\32xl\:divide-solid > :not([hidden]) ~ :not([hidden]) {
     border-style: solid;
   }
@@ -87118,6 +87779,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .\32xl\:from-error {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .\32xl\:via-default {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -87138,6 +87804,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .\32xl\:via-error {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .\32xl\:to-default {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -87156,6 +87826,10 @@ body, button {
 
   .\32xl\:to-muted-light {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .\32xl\:to-error {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .\32xl\:hover\:from-default:hover {
@@ -87183,6 +87857,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .\32xl\:hover\:from-error:hover {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .\32xl\:hover\:via-default:hover {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -87203,6 +87882,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .\32xl\:hover\:via-error:hover {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .\32xl\:hover\:to-default:hover {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -87221,6 +87904,10 @@ body, button {
 
   .\32xl\:hover\:to-muted-light:hover {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .\32xl\:hover\:to-error:hover {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .\32xl\:focus\:from-default:focus {
@@ -87248,6 +87935,11 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .\32xl\:focus\:from-error:focus {
+    --tw-gradient-from: var(--text-error-color);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .\32xl\:focus\:via-default:focus {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-default-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
@@ -87268,6 +87960,10 @@ body, button {
     --tw-gradient-stops: var(--tw-gradient-from), var(--text-muted-light-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
+  .\32xl\:focus\:via-error:focus {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--text-error-color), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
   .\32xl\:focus\:to-default:focus {
     --tw-gradient-to: var(--text-default-color);
   }
@@ -87286,6 +87982,10 @@ body, button {
 
   .\32xl\:focus\:to-muted-light:focus {
     --tw-gradient-to: var(--text-muted-light-color);
+  }
+
+  .\32xl\:focus\:to-error:focus {
+    --tw-gradient-to: var(--text-error-color);
   }
 
   .\32xl\:bg-opacity-0 {
@@ -87688,6 +88388,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .\32xl\:border-error {
+    border-color: var(--text-error-color);
+  }
+
   .group:hover .\32xl\:group-hover\:border-default {
     border-color: var(--text-default-color);
   }
@@ -87706,6 +88410,10 @@ body, button {
 
   .group:hover .\32xl\:group-hover\:border-muted-light {
     border-color: var(--text-muted-light-color);
+  }
+
+  .group:hover .\32xl\:group-hover\:border-error {
+    border-color: var(--text-error-color);
   }
 
   .\32xl\:focus-within\:border-default:focus-within {
@@ -87728,6 +88436,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .\32xl\:focus-within\:border-error:focus-within {
+    border-color: var(--text-error-color);
+  }
+
   .\32xl\:hover\:border-default:hover {
     border-color: var(--text-default-color);
   }
@@ -87748,6 +88460,10 @@ body, button {
     border-color: var(--text-muted-light-color);
   }
 
+  .\32xl\:hover\:border-error:hover {
+    border-color: var(--text-error-color);
+  }
+
   .\32xl\:focus\:border-default:focus {
     border-color: var(--text-default-color);
   }
@@ -87766,6 +88482,10 @@ body, button {
 
   .\32xl\:focus\:border-muted-light:focus {
     border-color: var(--text-muted-light-color);
+  }
+
+  .\32xl\:focus\:border-error:focus {
+    border-color: var(--text-error-color);
   }
 
   .\32xl\:border-opacity-0 {
@@ -93433,6 +94153,18 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .\32xl\:placeholder-error::-moz-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .\32xl\:placeholder-error:-ms-input-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .\32xl\:placeholder-error::placeholder {
+    color: var(--text-error-color);
+  }
+
   .\32xl\:focus\:placeholder-default:focus::-moz-placeholder {
     color: var(--text-default-color);
   }
@@ -93491,6 +94223,18 @@ body, button {
 
   .\32xl\:focus\:placeholder-muted-light:focus::placeholder {
     color: var(--text-muted-light-color);
+  }
+
+  .\32xl\:focus\:placeholder-error:focus::-moz-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .\32xl\:focus\:placeholder-error:focus:-ms-input-placeholder {
+    color: var(--text-error-color);
+  }
+
+  .\32xl\:focus\:placeholder-error:focus::placeholder {
+    color: var(--text-error-color);
   }
 
   .\32xl\:placeholder-opacity-0::-moz-placeholder {
@@ -96867,6 +97611,10 @@ body, button {
     --tw-ring-offset-color: var(--text-muted-light-color);
   }
 
+  .\32xl\:ring-offset-error {
+    --tw-ring-offset-color: var(--text-error-color);
+  }
+
   .\32xl\:focus-within\:ring-offset-default:focus-within {
     --tw-ring-offset-color: var(--text-default-color);
   }
@@ -96887,6 +97635,10 @@ body, button {
     --tw-ring-offset-color: var(--text-muted-light-color);
   }
 
+  .\32xl\:focus-within\:ring-offset-error:focus-within {
+    --tw-ring-offset-color: var(--text-error-color);
+  }
+
   .\32xl\:focus\:ring-offset-default:focus {
     --tw-ring-offset-color: var(--text-default-color);
   }
@@ -96905,6 +97657,10 @@ body, button {
 
   .\32xl\:focus\:ring-offset-muted-light:focus {
     --tw-ring-offset-color: var(--text-muted-light-color);
+  }
+
+  .\32xl\:focus\:ring-offset-error:focus {
+    --tw-ring-offset-color: var(--text-error-color);
   }
 
   .\32xl\:ring-offset-0 {
@@ -96987,6 +97743,10 @@ body, button {
     --tw-ring-color: var(--text-muted-light-color);
   }
 
+  .\32xl\:ring-error {
+    --tw-ring-color: var(--text-error-color);
+  }
+
   .\32xl\:focus-within\:ring-default:focus-within {
     --tw-ring-color: var(--text-default-color);
   }
@@ -97007,6 +97767,10 @@ body, button {
     --tw-ring-color: var(--text-muted-light-color);
   }
 
+  .\32xl\:focus-within\:ring-error:focus-within {
+    --tw-ring-color: var(--text-error-color);
+  }
+
   .\32xl\:focus\:ring-default:focus {
     --tw-ring-color: var(--text-default-color);
   }
@@ -97025,6 +97789,10 @@ body, button {
 
   .\32xl\:focus\:ring-muted-light:focus {
     --tw-ring-color: var(--text-muted-light-color);
+  }
+
+  .\32xl\:focus\:ring-error:focus {
+    --tw-ring-color: var(--text-error-color);
   }
 
   .\32xl\:ring-opacity-0 {
@@ -97271,6 +98039,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .\32xl\:text-error {
+    color: var(--text-error-color);
+  }
+
   .\32xl\:text-grey {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -97298,6 +98070,10 @@ body, button {
 
   .group:hover .\32xl\:group-hover\:text-muted-light {
     color: var(--text-muted-light-color);
+  }
+
+  .group:hover .\32xl\:group-hover\:text-error {
+    color: var(--text-error-color);
   }
 
   .group:hover .\32xl\:group-hover\:text-grey {
@@ -97329,6 +98105,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .\32xl\:focus-within\:text-error:focus-within {
+    color: var(--text-error-color);
+  }
+
   .\32xl\:focus-within\:text-grey:focus-within {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -97358,6 +98138,10 @@ body, button {
     color: var(--text-muted-light-color);
   }
 
+  .\32xl\:hover\:text-error:hover {
+    color: var(--text-error-color);
+  }
+
   .\32xl\:hover\:text-grey:hover {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -97385,6 +98169,10 @@ body, button {
 
   .\32xl\:focus\:text-muted-light:focus {
     color: var(--text-muted-light-color);
+  }
+
+  .\32xl\:focus\:text-error:focus {
+    color: var(--text-error-color);
   }
 
   .\32xl\:focus\:text-grey:focus {
