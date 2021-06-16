@@ -17762,6 +17762,13 @@ video {
   color: white;
 }
 
+.button.is-outlined {
+  background-color: var(--card-background-color);
+  border-color: var(--text-accent-color);
+  border-width: 1px;
+  color: var(--text-accent-color);
+}
+
 .theme-light .button {
   box-shadow: 0 2px 7px 0 #b0eaff;
 }
