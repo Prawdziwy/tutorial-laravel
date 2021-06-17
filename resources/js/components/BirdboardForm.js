@@ -11,23 +11,34 @@ class BirdboardForm {
     }
 
     data() {
-        let data = {};
-
-        for (let attribute in this.originalData) {
+        return Object.keys(this.originalData).reduce((data, attribute) => {
             data[attribute] = this[attribute];
-        }
 
-        return data;
+            return data;
+        }, {});
     }
 
-    submit(endpoint) {
-        return axios.post(endpoint, this.data())
+    post(endpoint) {
+        return this.submit(endpoint);
+    }
+
+    patch(endpoint) {
+        return this.submit(endpoint, 'patch');
+    }
+
+    delete(endpoint) {
+        return this.submit(endpoint, 'delete');
+    }
+
+    submit(endpoint, requestType = 'post') {
+        return axios[requestType](endpoint, this.data())
             .catch(this.onFail.bind(this))
             .then(this.onSuccess.bind(this));
     }
 
     onSuccess(response) {
         this.submitted = true;
+        this.errors = {};
 
         return response;
     }

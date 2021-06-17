@@ -2146,23 +2146,39 @@ var BirdboardForm = /*#__PURE__*/function () {
   _createClass(BirdboardForm, [{
     key: "data",
     value: function data() {
-      var data = {};
+      var _this = this;
 
-      for (var attribute in this.originalData) {
-        data[attribute] = this[attribute];
-      }
-
-      return data;
+      return Object.keys(this.originalData).reduce(function (data, attribute) {
+        data[attribute] = _this[attribute];
+        return data;
+      }, {});
+    }
+  }, {
+    key: "post",
+    value: function post(endpoint) {
+      return this.submit(endpoint);
+    }
+  }, {
+    key: "patch",
+    value: function patch(endpoint) {
+      return this.submit(endpoint, 'patch');
+    }
+  }, {
+    key: "delete",
+    value: function _delete(endpoint) {
+      return this.submit(endpoint, 'delete');
     }
   }, {
     key: "submit",
     value: function submit(endpoint) {
-      return axios__WEBPACK_IMPORTED_MODULE_0___default().post(endpoint, this.data())["catch"](this.onFail.bind(this)).then(this.onSuccess.bind(this));
+      var requestType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'post';
+      return (axios__WEBPACK_IMPORTED_MODULE_0___default())[requestType](endpoint, this.data())["catch"](this.onFail.bind(this)).then(this.onSuccess.bind(this));
     }
   }, {
     key: "onSuccess",
     value: function onSuccess(response) {
       this.submitted = true;
+      this.errors = {};
       return response;
     }
   }, {
