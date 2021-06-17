@@ -1925,6 +1925,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -1935,14 +1941,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         tasks: [{
           body: ''
         }]
-      }),
-      errors: {}
+      })
     };
   },
   methods: {
     addTask: function addTask() {
       this.form.tasks.push({
-        value: ''
+        body: ''
       });
     },
     submit: function submit() {
@@ -1953,11 +1958,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
+                if (!_this.form.tasks[0].body) {
+                  delete _this.form.originalData.tasks;
+                }
+
                 _this.form.submit('/projects').then(function (response) {
                   return location = response.data.message;
                 });
 
-              case 1:
+              case 2:
               case "end":
                 return _context.stop();
             }
@@ -2131,6 +2140,7 @@ var BirdboardForm = /*#__PURE__*/function () {
     this.originalData = JSON.parse(JSON.stringify(data));
     Object.assign(this, data);
     this.errors = {};
+    this.submitted = false;
   }
 
   _createClass(BirdboardForm, [{
@@ -2147,7 +2157,25 @@ var BirdboardForm = /*#__PURE__*/function () {
   }, {
     key: "submit",
     value: function submit(endpoint) {
-      return axios__WEBPACK_IMPORTED_MODULE_0___default().post(endpoint, this.data());
+      return axios__WEBPACK_IMPORTED_MODULE_0___default().post(endpoint, this.data())["catch"](this.onFail.bind(this)).then(this.onSuccess.bind(this));
+    }
+  }, {
+    key: "onSuccess",
+    value: function onSuccess(response) {
+      this.submitted = true;
+      return response;
+    }
+  }, {
+    key: "onFail",
+    value: function onFail(error) {
+      this.errors = error.response.data.errors;
+      this.submitted = false;
+      throw error;
+    }
+  }, {
+    key: "reset",
+    value: function reset() {
+      Object.assign(this, this.originalData);
     }
   }]);
 
@@ -38517,7 +38545,7 @@ var render = function() {
                     }
                   ],
                   staticClass: "border p-2 text-xs block w-full rounded",
-                  class: _vm.errors.title
+                  class: _vm.form.errors.title
                     ? "border-error"
                     : "border-muted-light",
                   attrs: { type: "text", id: "title" },
@@ -38532,10 +38560,12 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _vm.errors.title
+                _vm.form.errors.title
                   ? _c("span", {
                       staticClass: "text-xs italic text-error",
-                      domProps: { textContent: _vm._s(_vm.errors.title[0]) }
+                      domProps: {
+                        textContent: _vm._s(_vm.form.errors.title[0])
+                      }
                     })
                   : _vm._e()
               ]),
@@ -38559,8 +38589,10 @@ var render = function() {
                       expression: "form.description"
                     }
                   ],
-                  staticClass:
-                    "border border-muted-light p-2 text-xs block w-full rounded",
+                  staticClass: "border p-2 text-xs block w-full rounded",
+                  class: _vm.form.errors.description
+                    ? "border-error"
+                    : "border-muted-light",
                   attrs: { id: "description", rows: "7" },
                   domProps: { value: _vm.form.description },
                   on: {
@@ -38573,11 +38605,11 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _vm.errors.description
+                _vm.form.errors.description
                   ? _c("span", {
                       staticClass: "text-xs italic text-error",
                       domProps: {
-                        textContent: _vm._s(_vm.errors.description[0])
+                        textContent: _vm._s(_vm.form.errors.description[0])
                       }
                     })
                   : _vm._e()
@@ -38680,27 +38712,27 @@ var render = function() {
                 ]
               )
             ])
+          ]),
+          _vm._v(" "),
+          _c("footer", { staticClass: "flex justify-end" }, [
+            _c(
+              "button",
+              {
+                staticClass: "button is-outlined mr-4",
+                attrs: { type: "button" },
+                on: {
+                  click: function($event) {
+                    return _vm.$modal.hide("new-project")
+                  }
+                }
+              },
+              [_vm._v("Cancel")]
+            ),
+            _vm._v(" "),
+            _c("button", { staticClass: "button" }, [_vm._v("Create Project")])
           ])
         ]
-      ),
-      _vm._v(" "),
-      _c("footer", { staticClass: "flex justify-end" }, [
-        _c(
-          "button",
-          {
-            staticClass: "button is-outlined mr-4",
-            attrs: { type: "button" },
-            on: {
-              click: function($event) {
-                return _vm.$modal.hide("new-project")
-              }
-            }
-          },
-          [_vm._v("Cancel")]
-        ),
-        _vm._v(" "),
-        _c("button", { staticClass: "button" }, [_vm._v("Create Project")])
-      ])
+      )
     ]
   )
 }
