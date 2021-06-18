@@ -53,19 +53,21 @@
                             @else
                             <theme-switcher></theme-switcher>
 
-                            <a
-                                class="flex items-center text-default no-underline text-sm"
-                                href="#" role="button"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                                v-pre
-                            >
-                                <img width="35"
-                                    class="rounded-full mr-3"
-                                    src="{{ gravatar_url(auth()->user()->email) }}">
-                                    JeffreyWay
-                                </a>
+                            <dropdown>
+                                <template v-slot:trigger>
+                                    <button
+                                        class="flex items-center text-default no-underline text-sm"
+                                    >
+                                        <img width="35"
+                                            class="rounded-full mr-3"
+                                            src="{{ gravatar_url(auth()->user()->email) }}">
+                                        {{ auth()->user()->name }}
+                                    </button>
+                                </template>
+
+                                <a href="#" class="block text-default no-underline hover:underline text-sm leading-loose px-4">Item 1</a>
+                                <a href="#" class="block text-default no-underline hover:underline text-sm leading-loose px-4">Item 2</a>
+                            </dropdown>
                             @endguest
                         </div>
                     </div>
