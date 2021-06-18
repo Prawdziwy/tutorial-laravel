@@ -53,10 +53,11 @@
                             @else
                             <theme-switcher></theme-switcher>
 
-                            <dropdown>
+                            <dropdown align="right" width="200px">
                                 <template v-slot:trigger>
                                     <button
-                                        class="flex items-center text-default no-underline text-sm"
+                                        class="flex items-center text-default no-underline text-sm focus:outline-none"
+                                        v-pre
                                     >
                                         <img width="35"
                                             class="rounded-full mr-3"
@@ -65,8 +66,11 @@
                                     </button>
                                 </template>
 
-                                <a href="#" class="block text-default no-underline hover:underline text-sm leading-loose px-4">Item 1</a>
-                                <a href="#" class="block text-default no-underline hover:underline text-sm leading-loose px-4">Item 2</a>
+                                <form id="logout-form" method="POST" action="/logout">
+                                    @csrf
+
+                                    <button type="submit" class="dropdown-menu-link w-full text-left">Logout</button>
+                                </form>
                             </dropdown>
                             @endguest
                         </div>
