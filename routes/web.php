@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ProjectTasksController;
 use App\Http\Controllers\ProjectInvitationsController;
@@ -26,6 +27,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::patch('/projects/{project}/tasks/{task}', [ProjectTasksController::class, 'update']);
 
     Route::post('/projects/{project}/invitations', [ProjectInvitationsController::class, 'store']);
+
+    Route::get('/users', [UserController::class, 'index']);
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });

@@ -11,6 +11,7 @@
     },
     "devDependencies": {
         "axios": "^0.21",
+        "jquery": "^3.6.0",
         "laravel-mix": "^6.0.6",
         "laravel-mix-tailwind": "^0.1.2",
         "postcss": "^8.1.14",
@@ -23,6 +24,8 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "datatables.net": "^1.10.25",
+        "datatables.net-dt": "^1.1.0",
         "vue-js-modal": "^2.0.0-rc.6"
     }
 }
